@@ -28,7 +28,7 @@
     </head>
     <body>
         <div id="app">
-            {{-- 画面上部に表示するナビゲーションバーです。 -->>
+            {{-- 画面上部に表示するナビゲーションバーです。 --}}
             <nav class="navbar navbar-expand-md navbar-dark navbar-larabel">
                 <div class="container">
                     <a class="navbar-brand" href="{{url('/') }}">
@@ -49,7 +49,7 @@
                             
                             {{--以下を追記 --}}
                             <!-- Authentication Links -->
-                            {{-- ログインしていなかったらログイン画面へのリンクを表示 --}}
+                            {{-- ログインし���いなかったらログイン画面へのリンクを表示 --}}
                             @guest
                                 <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
                             {{-- ログインしていたらユーザー名とログアウトボタンを表示 --}}

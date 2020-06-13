@@ -33,7 +33,7 @@ class NewsController extends Controller
             $news->image_path = null;
         }   
         
-        // フォームからそうしんされてきた_takenを削除する
+        // フォームから送信されてきた_tokenを削除する
         unset($form['_token']);
         // フォームから送信されてきたimageを削除する
         unset($form['image']);

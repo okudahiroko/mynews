@@ -8,27 +8,27 @@ use App\Profile;
 
 class ProfileController extends Controller
 {
-    //
+    
     public function add()
     {
        return view('admin.profile.create');
     }
 
-    public function create()
+    public function create(Request $request)
     {
         return redirect('admin/profile/create');
     }
     
     public function edit()
     {
-        return view('admin.profile.edit');
+        return view('admin.profile.create');
     }
     
     public function update()
     {
         $this->validate($request, Profile::$rules);
         
-        $Profile = new Profile;
+        $profile = new Profile;
         $form = $request->all();
         
         unset($form['_token']);

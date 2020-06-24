@@ -57,7 +57,7 @@ class ProfileController extends Controller
     {
         // Validation をかける
         $this->validate($request, Profile::$rules);
-        // News Modelからデータを削除する
+        // Profile Modelからデータを削除する
         $profile = Profile::find($request->id);
         // 送信されてきたフォームデータを格納する
         $profile_form = $request->all();

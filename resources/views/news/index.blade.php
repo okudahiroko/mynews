@@ -34,7 +34,7 @@
                         <div class="row">
                             <div class="text col-md-6">
                                 <div class="date">
-                                    {{ $post->updated_at->format('Y年m月d日')　}}
+                                    {{ $post->updated_at->format('Y年m月d日') }}
                                 </div>
                                 <div class="title">
                                     {{ str_limit($post->title, 150) }}

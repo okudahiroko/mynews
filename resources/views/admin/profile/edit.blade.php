@@ -1,13 +1,13 @@
-@extends('layouts.admin')
-@section('titile','プロフィールの編集')
+@extends('layouts.profile')
+@section('title','プロフィールの編集')
 
 @section('content')
     <div class="container">
         <div class="row">
             <div class="col-md mx-auto">
                 <h2>プロフィールの編集</h2>
-                <form action="{{ action('Admin\ProfileController@update) }}" method="post" enctype="multipart/form-date">
-                    @if (count($errors->all() > 0)
+                <form action="{{ action('Admin\ProfileController@create') }}" method="post" enctype="multipart/form-data">
+                    @if (count($errors) > 0)
                         <ul>
                             @foreach($errors->all() as $e)
                                 <li>{{ $e }}</li>
@@ -17,12 +17,12 @@
                     <div class="form-group row">
                         <label class="col-md-2" for="name">名前</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="name" value="{{ $profile_form->title }}">
+                            <input type="text" class="form-control" name="name" value="{{ $profile_form->name }}">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2" for="gender">性別</label>
-                        <div class"col-md-10">
+                        <div class="col-md-10">
                             <input type="text" class="form-control" name="gender" value="{{ $profile_form->gender }}">
                         </div>
                     </div>
@@ -38,7 +38,7 @@
                             <input type="text" class="form-control" name="introduction" row="{{ $profile_form->introduction }}">
                         </div>
                     </div>
-                </form>
+                </form>    
                 {{-- 以下を追記 --}}
                 <div class="row mt-5">
                     <div class="col-md-4 mx-auto">
